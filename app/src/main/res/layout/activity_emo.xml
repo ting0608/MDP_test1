@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8cbc6"
+    tools:context=".Emo"
+    android:fitsSystemWindows="true"
+    android:id="@+id/drawer_layout"
+    tools:openDrawer="start"
+
+
+    >
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+        android:layout_gravity="start"
+
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f8cbc6"
+            tools:layout_editor_absoluteY="1dp"
+
+            >
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="28dp"
+                android:adjustViewBounds="true"
+                android:background="#f8cbc6"
+                android:scaleType="centerInside"
+                android:stateListAnimator="@null"
+                android:theme="?attr/actionBarTheme"
+                android:translationX="30dp"
+                android:translationY="0dp"
+                android:translationZ="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/titleEmo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/menu_2"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/titleEmo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="EMOTIONAL OUTBURST"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:translationY="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/EMO_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/titleEmo"
+                app:srcCompat="@drawable/emo_img" />
+
+            <SeekBar
+                android:id="@+id/timer_sb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="300dp"
+                android:progressTint="@color/black"
+                android:thumbTint="@color/black"
+                android:backgroundTint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/EMO_main" />
+
+            <TextView
+                android:id="@+id/timer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:30"
+                android:textSize="60sp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/timer_sb" />
+
+            <Button
+                android:id="@+id/start_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:backgroundTint="@color/black"
+                android:onClick="start_timer"
+                android:layout_marginTop="100dp"
+                android:text="START"
+                app:cornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/timer_tv"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>

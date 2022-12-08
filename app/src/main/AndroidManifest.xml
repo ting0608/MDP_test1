@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mdp_app_1">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MDP_app_test1">
+        <activity
+            android:name=".RegisterScreen"
+            android:exported="false" />
+        <activity
+            android:name=".LoginScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Anxious"
+            android:exported="false" />
+        <activity
+            android:name=".Mood"
+            android:exported="false" />
+        <activity
+            android:name=".Emo"
+            android:exported="false" /> <!-- label = "" to Hide the title label -->
+        <activity
+            android:name=".ContactScreen"
+            android:exported="false"
+            android:label=""
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".GalleryScreen"
+            android:exported="false" />
+        <activity
+            android:name=".MainScreen"
+            android:exported="true"
+            android:label="@string/title_activity_main_screen"
+            android:theme="@style/Theme.MDP_app_test1.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Anxious"
+    android:fitsSystemWindows="true"
+    android:id="@+id/drawer_layout"
+    tools:openDrawer="start"
+
+
+    >
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+        android:layout_gravity="start"
+
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            tools:layout_editor_absoluteY="1dp"
+
+            >
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="28dp"
+                android:adjustViewBounds="true"
+                android:background="@color/background"
+                android:scaleType="centerInside"
+                android:stateListAnimator="@null"
+                android:theme="?attr/actionBarTheme"
+                android:translationX="0dp"
+                android:translationY="0dp"
+                android:translationZ="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/menu_2"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingRight="60dp"
+                android:paddingBottom="30dp"
+                android:text="Anxiety Spin"
+                android:textSize="36dp"
+                android:textStyle="bold"
+                android:translationX="30dp"
+                android:translationY="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/Anxiety"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:translationY="50dp"
+
+                app:layout_constraintStart_toStartOf="@+id/toolbar"
+                app:layout_constraintTop_toTopOf="@+id/toolbar"
+                app:srcCompat="@drawable/anxiety1" />
+
+            <ImageView
+                android:id="@+id/wheel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="160dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/Anxiety"
+                app:srcCompat="@drawable/spin" />
+
+
+            <ImageView
+                android:id="@+id/point"
+                android:layout_width="100dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="220dp"
+
+                android:rotation="90"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/Anxiety"
+                app:srcCompat="@drawable/point"
+                app:tint="@color/black" />
+
+            <Button
+                android:id="@+id/spinbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="112dp"
+
+                android:backgroundTint="#000000"
+                android:translationY="20dp"
+
+                android:text="Spin"
+                app:cornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>
